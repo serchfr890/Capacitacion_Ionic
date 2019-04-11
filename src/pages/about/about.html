@@ -1,0 +1,21 @@
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title> {{ name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<button ion-button full (click)="back()">Regresar</button>
+<button ion-button full (click)="clearStack()">Clear Stack</button>
+<button ion-button full color="danger">Clear Stack</button>
+<button ion-button full color="secundary">Clear Stack</button>
+<button ion-button full color="">Clear Stack</button>
+
+<div *ngFor="let item of names"> {{item}}</div>
+</ion-content>
