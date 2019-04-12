@@ -11,6 +11,7 @@ import { LoginPage } from '../pages/login/login';
 import { CreateAccountPage } from '../pages/create-account/create-account';
 import { UserProvider } from '../providers/user/user';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MensajesProvider } from '../providers/mensajes/mensajes';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UserProvider
+    UserProvider,
+    MensajesProvider
   ]
 })
 export class AppModule {}

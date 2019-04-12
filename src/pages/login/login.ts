@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { CreateAccountPage } from '../create-account/create-account';
 import { UserProvider } from '../../providers/user/user';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the LoginPage page.
@@ -42,6 +43,7 @@ export class LoginPage {
       .subscribe( response => {
         console.log(response);
         loading.dismiss()
+        this.navCtrl.setRoot(HomePage, response)
       }, err => {
         console.log(err);
         loading.dismiss()

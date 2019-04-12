@@ -16,11 +16,11 @@ export class UserProvider {
   }
 
   createUser(user:UserModel){
-    return this.http.post('http://10.11.1.219:3000/api/users', user);
+    return this.http.post('http://a227fbe2.ngrok.io/api/users', user);
   }
 
   loginUser(user:string, pwd:string){
-    return this.http.post('http://10.11.1.219:3000/api/users',{user, pwd});
+    return this.http.post('http://a227fbe2.ngrok.io/api/login',{user, pwd});
   }
 
 }
